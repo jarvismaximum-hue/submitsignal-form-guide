@@ -1,0 +1,16 @@
+{
+  "name": "submitsignal-form-guide",
+  "version": "1.0.2",
+  "description": "Assess self-reported WPForms Lite form scope and interpret reported form-check evidence without visiting websites or accessing accounts.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "submitsignal-guide": {
+      "httpUrl": "https://getsubmitsignal.com/agent-mcp",
+      "includeTools": [
+        "assess_form_compatibility",
+        "explain_form_check_evidence",
+        "get_wordpress_setup_scope"
+      ]
+    }
+  }
+}

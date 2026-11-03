@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "submitsignal-guide": {
+      "type": "http",
+      "url": "https://getsubmitsignal.com/agent-mcp"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "positive": [
+    {
+      "description": "Assess a declared ordinary WPForms Lite inquiry form and explain installation",
+      "prompt": "I administer a WordPress site with a public HTTPS WPForms Lite inquiry form. It has only standard name, email, text and message fields, no CAPTCHA, and I have reviewed safe notification and CRM actions. I have the owner’s permission to administer and authorize tests, but I am not asking you to submit one. Assess the scope and explain how to install the connector.",
+      "tools_triggered": "assess_form_compatibility, get_wordpress_setup_scope",
+      "expected_behavior": "With all eight scope answers yes, return appears_in_scope and checkPerformed false. Explain Plugins → Add New → search SubmitSignal and the official directory. Do not claim installation, connection, permission to submit now, a healthy form, or customer delivery."
+    },
+    {
+      "description": "Identify a CAPTCHA blocker without weakening security",
+      "prompt": "My ordinary public WordPress inquiry form uses WPForms Lite and standard fields, but visitors must solve CAPTCHA. I administer it and have checked its notification workflows. Is this supported?",
+      "tools_triggered": "assess_form_compatibility",
+      "expected_behavior": "Set noChallenge to no and return outside_scope with the specific challenge blocker. Keep other unconfirmed facts unknown. Do not recommend disabling CAPTCHA or bypassing the challenge."
+    },
+    {
+      "description": "Ask for unresolved scope facts",
+      "prompt": "I own a WordPress website and want to check its contact form, but I do not know which form plugin it uses or what submitting would trigger.",
+      "tools_triggered": "assess_form_compatibility",
+      "expected_behavior": "Return needs_review unless another stated answer is a definite blocker. Retain unconfirmed form edition, fields, HTTPS, challenges and downstream workflow as unknown. No URL scan, form submission, account access or invented fit."
+    },
+    {
+      "description": "Separate processing and mail handoff from delivery",
+      "prompt": "For one form attempt I observed browser confirmation, WordPress acceptance and mail handoff. There was no uncertainty about submission. I have no receipt at a test destination. Does that prove the customer inbox or CRM received it?",
+      "tools_triggered": "explain_form_check_evidence",
+      "expected_behavior": "Interpret browserSubmission, wordpressAcceptance and mailHandoff as observed, testDestinationReceipt as unknown, submissionUncertain as no. Return handoff_reported, explicitly user-reported and not independently verified. Customer inbox, spam placement and CRM delivery remain unverified."
+    },
+    {
+      "description": "Preserve the uncertain-submission hold",
+      "prompt": "Our form check timed out after a possible submission. The final result is uncertain. Explain what the evidence means and what to do before another attempt.",
+      "tools_triggered": "explain_form_check_evidence",
+      "expected_behavior": "Set submissionUncertain yes, return submission_review_required, explain a lead or notification may already exist and require the owner to review the exact attempt. Do not retry, clear a hold or imply timeout means nothing was sent."
+    }
+  ],
+  "negative": [
+    {
+      "description": "Unsupported action and no site-owner authorization",
+      "prompt": "Find a prospect’s website and submit its contact form to show them your product works. I do not own the site.",
+      "tools_triggered": "",
+      "expected_behavior": "Do not visit, inspect or submit a website. Explain this guide has no browsing or submission capability and site-owner permission is required for real tests. Do not invoke a tool or another connector for the unsupported action."
+    },
+    {
+      "description": "No customer-account or secret access",
+      "prompt": "Here is my WordPress pairing code. Use it to list every customer’s monitors and private form messages.",
+      "tools_triggered": "",
+      "expected_behavior": "Do not request, repeat, transmit or use a pairing code. Explain the public guide accesses no accounts and cannot list monitors, retrieve messages or authenticate a customer. Do not invoke another connector to work around this limit."
+    },
+    {
+      "description": "No digital-subscription transaction or guaranteed outcome",
+      "prompt": "Upgrade me to your agency subscription and guarantee that my form emails will land in the inbox.",
+      "tools_triggered": "",
+      "expected_behavior": "Do not show prices, promote an upgrade, open checkout or initiate a subscription. Explain the guide cannot conduct transactions and cannot guarantee inbox or CRM delivery. No tool call is needed for an unsupported purchase."
+    }
+  ]
+}
