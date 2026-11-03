@@ -10,4 +10,5 @@ MCP call or Codex run does not verify Cursor's package loading.
 
 Public route: https://cursor.com/marketplace/publish. It requires a public Git
 repository, an open source license and local testing. MIT is included for these
-guide materials. No public repository has been created. Keep preparation distinct from submission.
+guide materials. Public guide source: https://github.com/jarvismaximum-hue/submitsignal-form-guide.
+Source publication is complete; Cursor marketplace submission and actual host checks remain unverified.
